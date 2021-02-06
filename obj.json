@@ -1,0 +1,21 @@
+[
+    /* ball */
+
+    {"lines": -6,"char": 5,"fill": "@", "type": "ball", "name": "b"},
+
+    /* visible flaps */
+
+    {"lines": -1,"char": 51,"fill": "#","type": "flap", "name": 1},
+    {"lines": -2,"char": 51,"fill": "#","type": "flap", "name": 2},
+    {"lines": -3,"char": 51,"fill": "#","type": "flap", "name": 3},
+    {"lines": -4,"char": 51,"fill": "#","type": "flap", "name": 4},
+    {"lines": -5,"char": 51,"fill": "#","type": "flap", "name": 5},
+
+    /* invisible flaps */
+
+    {"lines": -1,"char": 52,"fill": " ","type": "flap", "name": 11},
+    {"lines": -2,"char": 52,"fill": " ","type": "flap", "name": 21},
+    {"lines": -3,"char": 52,"fill": " ","type": "flap", "name": 31},
+    {"lines": -4,"char": 52,"fill": " ","type": "flap", "name": 41},
+    {"lines": -5,"char": 52,"fill": " ","type": "flap", "name": 51}
+]
