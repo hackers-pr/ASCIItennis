@@ -7,7 +7,11 @@ ASCII ping-pong game, written on ruby.
 
 # Controls:
 W+Enter, move up
+
 S+Enter, move down
+
 J+Enter, increase speed
+
 K+Enter, decrease speed
+
 Q+Enter or Ctrl+D, exit
