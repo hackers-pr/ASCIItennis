@@ -1,11 +1,10 @@
 require "json"
-require "active_support/core_ext/hash/except"
 
 lines,chars=10,60
 xCounter,yCounter,score,fps=2,-1,0,20
 points=Hash.new
 
-JSON.parse(IO.read("obj.json")).each {|hash| points[hash["name"]]=hash.except("name")}
+JSON.parse(IO.read("obj.json")).each {|hash| points[hash["name"]]=hash.select{|k,v| k!="name"}}
 
 loop do
     begin;case STDIN.read_nonblock(2).downcase
