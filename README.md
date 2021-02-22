@@ -2,7 +2,6 @@
 ASCII ping-pong game, written on ruby.
 
 # Requirements:
-* activesupport gem;
 * ruby >2.6.0
 
 # Controls:
