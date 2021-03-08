@@ -17,14 +17,14 @@ loop do
     rescue Errno::EAGAIN;end
     onlyLCF=points.values.map {|val| (val.slice("lines","char") if val["type"]=="flap")}
     if points["b"]["lines"]<-(lines-1) or points["b"]["lines"]>-2
-        yCounter=-yCounter 
+        yCounter=-yCounter
     elsif points["b"]["char"]<=0
         xCounter=xCounter.abs
     elsif onlyLCF.include?(points["b"].slice("lines","char"))
         xCounter=-xCounter-1
         score+=1
     elsif xCounter>=3
-        xCounter=1*xCounter.abs/xCounter 
+        xCounter=1*xCounter.abs/xCounter
     end
 
     points["b"]["lines"]+=yCounter
@@ -37,6 +37,6 @@ loop do
     break if points["b"]["char"]>chars-1
 
     sleep(fps**-1)
-end 
+end
 
 puts "Game over!"
