@@ -7,12 +7,12 @@ points=Hash.new
 JSON.parse(IO.read("obj.json")).each {|hash| points[hash["name"]]=hash.select{|k,v| k!="name"}}
 
 loop do
-    begin;case STDIN.read_nonblock(2).downcase
-            when "q\n" then exit
-            when "j\n" then fps*=2
-            when "k\n" then fps=(fps/2).to_i
-            when "w\n" then points.keys.each {|name| (points[name]["lines"]-=5 if points[name]["type"]=="flap")}
-            when "s\n" then points.keys.each {|name| (points[name]["lines"]+=5 if points[name]["type"]=="flap")}
+    begin;case STDIN.read_nonblock(2).downcase.chop
+            when "q" then exit
+            when "j" then fps*=2
+            when "k" then fps=(fps/2).to_i
+            when "w" then points.keys.each {|name| (points[name]["lines"]-=5 if points[name]["type"]=="flap")}
+            when "s" then points.keys.each {|name| (points[name]["lines"]+=5 if points[name]["type"]=="flap")}
         end
     rescue Errno::EAGAIN;end
     onlyLCF=points.values.map {|val| (val.slice("lines","char") if val["type"]=="flap")}
